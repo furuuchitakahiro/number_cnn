@@ -1,0 +1,13 @@
+runtime: python
+env: flex
+entrypoint: sh utils/startapp.prd.sh
+instance_class: F1
+runtime_config:
+    python_version: 3
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1
+env_variables:
+  FLASK_APP: src/app
+  FLASK_RUN_HOST: 127.0.0.1
+  FLASK_RUN_PORT: 8080

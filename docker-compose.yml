@@ -1,0 +1,13 @@
+version: "3"
+services:
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile_dev
+    volumes:
+      - ./web:/usr/src/app
+    ports:
+      - "8000:8000"
+    command: flask run
+    tty: true
+    stdin_open: true

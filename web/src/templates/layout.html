@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <title>数字画像判定</title>
+  <body>
+    <h1>数字画像から数字を判定</h1>
+    <form action="/result" method="post" enctype="multipart/form-data">
+      <input type="file" name="img">
+      <button type='submit'>送信</button>
+    </form>
+    {% block content %}{% endblock %}
+  </body>
+</head>
